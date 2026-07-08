@@ -1,0 +1,39 @@
+.topbar {
+  background: linear-gradient(to bottom, #000, transparent);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  transition: background-color 0.5s ease;
+}
+
+.topbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #00b7ff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+span {
+  color: #fff;
+}
+
+.userName {
+  color: #fff;
+  font-weight: 200;
+}
+
+.scrolled {
+  background: #000
+}
+
+a {
+  text-decoration: none;
+}

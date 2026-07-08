@@ -1,0 +1,48 @@
+.movieSectionTitle {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.movieList {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1rem;
+  padding: 1rem 0 0 0;
+}
+
+.movieItem {
+  width: 250px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.movieItem:hover {
+  transform: scale(1.05);
+}
+
+.moviePoster {
+  width: 100%;
+  height: auto;
+}
+
+.movieList::-webkit-scrollbar {
+  height: 10px; /* Barra horizontal */
+}
+
+.movieList::-webkit-scrollbar-track {
+  background: #cccccc56;
+  border-radius: 10px;
+}
+
+.movieList::-webkit-scrollbar-thumb {
+  background: #00668f;
+  border-radius: 10px;
+}
+
+.movieList::-webkit-scrollbar-thumb:hover {
+  background: #008fc7;
+  cursor: pointer;
+}
