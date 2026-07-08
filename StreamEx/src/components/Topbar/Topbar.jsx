@@ -19,7 +19,8 @@ const Topbar = () => {
     <div className={`${styles.topbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.topbarContent}>
         
-        <Link to="/">
+        <Link className={styles.logoLink} to="/">
+          <img src="/MovieNiacLogo.png" alt="MovieNiac Logo" />
           <p className={styles.logo}>
             movie<span>niac</span>
           </p>
