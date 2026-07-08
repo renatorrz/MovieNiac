@@ -5,22 +5,28 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import Home from './pages/Home/Home.jsx'
 import Movie from './pages/Movie/Movie.jsx'
+import MainLayout from './layouts/MainLayout.jsx'
+import NoFooterLayout from './layouts/NoFooterLayout.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    element: <MainLayout />,
     children: [
       {
-        index: true,
+        path: "/",
         element: <Home />
-      },
+      }
+    ]
+  },
+  {
+    element: <NoFooterLayout />,
+    children: [
       {
         path: "/movie/:id",
         element: <Movie />
       }
     ]
-  },
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
