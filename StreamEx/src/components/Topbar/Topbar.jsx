@@ -26,7 +26,7 @@ const Topbar = () => {
           </p>
         </Link>
 
-        <h3 className={styles.userName}>Renato Zanco</h3>
+        <h3 className={styles.userName}>Renato</h3>
       </div>
     </div>
   );

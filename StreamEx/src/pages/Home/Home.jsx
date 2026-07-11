@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import tmdbApi from "../../services/tmdbApi";
-import MovieSection from "../../components/movieSection/movieSection";
+import MovieSection from "../../components/MovieSection/MovieSection";
 import styles from "./Home.module.css";
 import BannerMovie from "../../components/BannerMovie/BannerMovie";
 import Loading from "../../components/Loading/Loading";
@@ -13,7 +13,7 @@ const Home = () => {
     const loadAll = async () => {
       const list = await tmdbApi.getHomeList();
       setMovieList(list);
-      // console.log(list)
+      console.log(list)
 
       const popularCategory = list.find((item) => item.slug === "popular");
       const randomIndex = Math.floor(
@@ -41,6 +41,7 @@ const Home = () => {
           <MovieSection
             key={list.slug}
             title={list.title}
+            icon={list.icon}
             items={list.items.results}
           />
         ))}

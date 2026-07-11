@@ -10,21 +10,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .2rem 5rem;
+  margin: 0 2rem ;
 }
 
 .logoLink {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(0.2rem, 2vw, 1rem);
 }
 
 .topbarContent img {
-  width: 80px;
+  width: clamp(50px, 8vw, 80px);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 5vw, 2rem);
   color: #00b7ff;
   font-weight: bold;
   text-transform: uppercase;
@@ -38,12 +38,35 @@
 .userName {
   color: #fff;
   font-weight: 200;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .scrolled {
-  background: linear-gradient(to bottom, #000, #00141f)
+  background: linear-gradient(to bottom, #000, #00141f);
 }
 
 a {
   text-decoration: none;
+}
+
+@media(max-width: 480px) {
+  .topbarContent {
+    margin: 0.5rem 1rem;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media(max-width: 768px) {
+  .topbarContent {
+    margin: 0.5rem 1rem;
+  }
+}
+
+@media(max-width: 1024px) {
+  .topbarContent {
+    margin: 0.5rem 1rem;
+  }
 }

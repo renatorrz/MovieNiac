@@ -23,7 +23,7 @@ const BannerMovie = ({ movie }) => {
         <div className={styles.movieInfoContainer}>
           <div>
             <h1 className={styles.movieTitle}>{movie.title}</h1>
-            {/* <p className={styles.tagline}>{movie.tagline}</p> */}
+            <p className={styles.tagline}>{movie.tagline}</p>
           </div>
 
           <div className={styles.movieMeta}>

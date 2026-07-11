@@ -1,11 +1,14 @@
 import React from 'react'
-import styles from './movieSection.module.css'
+import styles from './MovieSection.module.css'
 import { Link } from 'react-router-dom'
 
-const MovieSection = ({title, items}) => {
+// Componente de seção de filmes
+const MovieSection = ({title, icon: Icon, items}) => {
   return (
     <div className={styles.movieSection}>
-      <h2 className={styles.movieSectionTitle}>{title}</h2>
+      <h2 className={styles.movieSectionTitle}>
+        <Icon className={styles.movieSectionIcon} /> {title}
+      </h2>
       <div className={styles.movieList}>
         {items.map((movie, key) => (
           <Link key={key} to={`/movie/${movie.id}`}>
