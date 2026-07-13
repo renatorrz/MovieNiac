@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './MovieSection.module.css'
 import { Link } from 'react-router-dom'
+import { FaPlay } from 'react-icons/fa'
 
 // Componente de seção de filmes
 const MovieSection = ({title, icon: Icon, items}) => {
@@ -13,6 +14,9 @@ const MovieSection = ({title, icon: Icon, items}) => {
         {items.map((movie, key) => (
           <Link key={key} to={`/movie/${movie.id}`}>
             <div className={styles.movieItem}>
+              <div className={styles.playOverlay}>
+                <FaPlay className={styles.playIcon} />
+              </div>
               <img className={styles.moviePoster} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             </div>
           </Link>

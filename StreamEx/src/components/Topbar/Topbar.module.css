@@ -42,7 +42,9 @@
 }
 
 .scrolled {
-  background: linear-gradient(to bottom, #000, #00141f);
+  background: linear-gradient(to bottom, #0000008c, #00141f8e);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 a {

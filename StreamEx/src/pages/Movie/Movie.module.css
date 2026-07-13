@@ -130,7 +130,7 @@
 }
 
 .actor {
-  width: clamp(50px, 5vw, 70px);
+  width: clamp(50px, 5vw, 80px);
   transition: transform 0.3s;
 }
 
