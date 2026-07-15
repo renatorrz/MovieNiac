@@ -3,6 +3,8 @@ import styles from "./SearchPage.module.css";
 import { useSearchParams } from "react-router-dom";
 import tmdbApi from "../../services/tmdbApi";
 import Loading from "../../components/Loading/Loading";
+import { Link } from 'react-router-dom'
+import { FaPlay } from 'react-icons/fa'
 
 const SearchPage = () => {
   const [searchParams] = useSearchParams();
@@ -40,16 +42,24 @@ const SearchPage = () => {
     <div className={styles.searchPage}>
       <div className={styles.searchContainer}>
         <p className={styles.resultCount}>
-          {resultLength > 0 ? `Found ${resultLength} results for "${query}"` : `No results found for "${query}"`}
+          {resultLength > 0
+            ? `Found ${resultLength} results for "${query}"`
+            : `No results found for "${query}"`}
         </p>
         <div className={styles.moviesContainer}>
-          {movies.map((movie) => (
-            <div key={movie.id} className={styles.movieItem}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-              />
-            </div>
+          {movies.map((movie, key) => (
+            <Link key={key} to={`/movie/${movie.id}`}>
+              <div className={styles.movieItem}>
+                <div className={styles.playOverlay}>
+                  <FaPlay className={styles.playIcon} />
+                </div>
+                <img
+                  className={styles.moviePoster}
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
