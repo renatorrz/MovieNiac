@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Topbar.module.css";
 import { Link } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 
-const Topbar = () => {
+const Topbar = ({items}) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,6 +26,8 @@ const Topbar = () => {
             movie<span>niac</span>
           </p>
         </Link>
+
+        <SearchBar />
 
         <h3 className={styles.userName}>Renato</h3>
       </div>

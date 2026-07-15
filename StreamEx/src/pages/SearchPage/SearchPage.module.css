@@ -1,0 +1,27 @@
+.searchPage {
+  flex-grow: 1;
+}
+
+.resultCount {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-top: 5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.moviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.movieItem {
+  width: clamp(150px, 5vw, 200px);
+}
+
+.movieItem img{
+  width: 100%;
+  height: auto;
+}

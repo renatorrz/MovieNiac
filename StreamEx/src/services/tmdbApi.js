@@ -74,4 +74,7 @@ export default {
       `/movie/${movieId}?language=en&append_to_response=credits`,
     );
   },
+  searchMovies: async (query) => {
+    return await basicFetch(`/search/movie?query=${encodeURIComponent(query)}&language=en`);
+  }
 };

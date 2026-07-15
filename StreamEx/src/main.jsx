@@ -7,6 +7,7 @@ import Home from './pages/Home/Home.jsx'
 import Movie from './pages/Movie/Movie.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
 import NoFooterLayout from './layouts/NoFooterLayout.jsx'
+import SearchPage from './pages/SearchPage/SearchPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/search",
+        element: <SearchPage />
       }
     ]
   },
