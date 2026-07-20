@@ -10,22 +10,22 @@
 }
 
 .resultCount {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
+  font-style: italic;
   margin-bottom: 1rem;
   padding-top: 5rem;
-  color: #fff;
+  color: #ccc;
   text-align: center;
 }
 
 .moviesContainer {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 0;
-
+  padding: clamp(6px, 2vw, 16px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 20vw, 200px), 2fr));
+  gap: clamp(10px, 2vw, 16px);
 }
 
 .movieItem {

@@ -43,7 +43,7 @@ const SearchPage = () => {
       <div className={styles.searchContainer}>
         <p className={styles.resultCount}>
           {resultLength > 0
-            ? `Found ${resultLength} results for "${query}"`
+            ? `Showing ${resultLength} results for "${query}"`
             : `No results found for "${query}"`}
         </p>
         <div className={styles.moviesContainer}>
