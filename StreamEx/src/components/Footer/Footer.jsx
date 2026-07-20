@@ -8,7 +8,7 @@ const Footer = () => {
         <p className={styles.logo}>
           movie<span>niac</span>
         </p>
-        <p className={styles.copyright}>&copy; 2026 MovieNiac. All rights reserved.</p>
+        <p className={styles.copyright}>Feito com ❤️ por <span>RZ</span></p>
       </div>
     </footer>
   );
